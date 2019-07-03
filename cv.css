@@ -1,0 +1,236 @@
+:root {
+  --graybar-width: 25%;
+  --highlight-color: #5ab494;
+}
+
+@font-face {
+ font-family: "Krinkes";
+ src: url("./KrinkesDecorPERSONAL.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "KrinkesReg";
+ src: url("./KrinkesRegularPERSONAL.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  text-align: justify;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  font: 13px/19.5px "Open Sans", Arial, sans-serif;
+}
+
+a {
+  color: var(--highlight-color);
+}
+
+.page {
+  padding: 24px 0;
+  background: linear-gradient(90deg,
+    #eee 0%,
+    #eee var(--graybar-width),
+    white var(--graybar-width),
+    white 100%);
+}
+
+h1 {
+  margin-left: calc(var(--graybar-width) - 105px);
+  margin-bottom: 30px;
+}
+
+.title-name {
+  font-size: 60px;
+  line-height: 1em;
+  display: inline-block;
+  font-family: Krinkes, serif;
+  font-weight: normal;
+}
+
+.title-name::first-letter {
+  color: var(--highlight-color);
+}
+
+.title-job {
+  font-weight: normal;
+  font-size: 24px;
+  margin-left: 220px;
+}
+
+.personal-info {
+  margin-left: var(--graybar-width);
+  padding-left: 12px;
+}
+
+.personal-info > div {
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.personal-info > div::before {
+  position: absolute;
+  left: -36px;
+}
+
+.phone::before {
+  content: '📞';
+}
+
+.mail::before {
+  content: '@';
+}
+
+.address::before {
+  content: '🖃';
+}
+
+sup {
+  position: absolute;
+  top: -3px;
+}
+
+.misc::before {
+  content: '🛈';
+}
+
+.github {
+  background: url(github.svg) no-repeat left center;
+  background-size: 14px;
+  margin-left: -36px;
+  padding-left: 36px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+section {
+  margin-bottom: 6px;
+}
+
+footer {
+  text-align: right;
+  font-style: italic;
+  color: #ccc;
+  margin-top: 72px;
+  padding-right: 12px;
+}
+
+h2 {
+  border-bottom: 1px solid black;
+  line-height: 14px;
+  margin-left: 5%;
+  padding-left: 12px;
+  font-size: 18px;
+}
+
+h2::first-letter {
+  color: var(--highlight-color);
+  font-family : Krinkes, cursive;
+  font-size: 30px;
+  font-weight: normal
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.skills {
+  margin-left: var(--graybar-width);
+  padding: 12px;
+  display: flex;
+}
+
+.skills ul {
+  margin-right: 36px;
+}
+
+.item {
+  display: flex;
+}
+
+.item-meta {
+  flex-basis: var(--graybar-width);
+  flex-shrink: 0;
+  padding: 12px;
+  text-align: right;
+  color: #888;
+}
+
+.item-main {
+  flex-grow: 1;
+  padding: 12px;
+}
+
+.job-skills {
+  margin: 6px 0 12px;
+}
+
+.job-skills li {
+  display: inline-block;
+  background-color: var(--highlight-color);
+  color: white;
+  margin-right: 6px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+.job-subtitle {
+  font-style: italic;
+}
+
+.job-description li {
+  display: block;
+}
+
+.details {
+	list-style-type: none;
+}
+
+.details li {
+	margin-left: 10px;
+	display: list-item;
+}
+
+.details li:before {
+  content: '⋅';
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.pageBreak {
+  display: none;
+}
+
+
+@media print {
+  section:last-child {
+    margin-bottom: 120px;
+  }
+
+  .pageBreak {
+    display: block;
+  }
+
+  .pageBreak + .item {
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  .pageBreak + .item > .item-meta {
+    padding-top: 18px;
+  }
+}
