@@ -103,16 +103,18 @@ h1 {
   left: -36px;
 }
 
-.phone::before {
-  content: '📞';
+.mail {
+  background: url(at.svg) no-repeat left center;
+  background-size: 14px;
+  margin-left: -36px;
+  padding-left: 36px;
 }
 
-.mail::before {
-  content: '@';
-}
-
-.address::before {
-  content: '🖃';
+.address {
+  background: url(placeholder.svg) no-repeat left center;
+  background-size: 14px;
+  margin-left: -36px;
+  padding-left: 36px;
 }
 
 sup {
@@ -120,8 +122,11 @@ sup {
   top: -3px;
 }
 
-.misc::before {
-  content: '🛈';
+.misc {
+  background: url(information.svg) no-repeat left center;
+  background-size: 14px;
+  margin-left: -36px;
+  padding-left: 36px;
 }
 
 .github {
