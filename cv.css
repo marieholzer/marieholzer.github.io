@@ -1,16 +1,16 @@
 :root {
   --graybar-width: 25%;
   --highlight-color: #5ab494;
+  --fancyFont: Krinkes, cursive;
+}
+
+.teaching {
+  --fancyFont: Helvetica, Arial;
 }
 
 @font-face {
  font-family: "Krinkes";
  src: url("./KrinkesDecorPERSONAL.ttf") format("truetype");
-}
-
-@font-face {
- font-family: "KrinkesReg";
- src: url("./KrinkesRegularPERSONAL.ttf") format("truetype");
 }
 
 * {
@@ -74,7 +74,7 @@ h1 {
   font-size: 60px;
   line-height: 1em;
   display: inline-block;
-  font-family: Krinkes, serif;
+  font-family: var(--fancyFont);
   font-weight: normal;
 }
 
@@ -86,6 +86,24 @@ h1 {
   font-weight: normal;
   font-size: 24px;
   margin-left: 220px;
+}
+
+.teaching h1 {
+  margin-left: var(--graybar-width);
+  text-align: right;
+  margin-right: 24px;
+}
+
+.teaching .title-name {
+  font-size: 35px;
+}
+
+.teaching .title-name::first-letter {
+  color: inherit;
+}
+
+.teaching .title-job {
+  margin-left: 0;
 }
 
 .personal-info {
@@ -144,12 +162,20 @@ section {
   margin-bottom: 6px;
 }
 
+.teaching section {
+  margin-bottom: 18px;
+}
+
 footer {
   text-align: right;
   font-style: italic;
   color: #ccc;
   margin-top: 72px;
   padding-right: 12px;
+}
+
+.teaching footer {
+  display: none;
 }
 
 h2 {
@@ -160,11 +186,26 @@ h2 {
   font-size: 18px;
 }
 
+.teaching h2 {
+  border-bottom: 0;
+  width: var(--graybar-width);
+  text-align: right;
+  padding-right: 12px;
+  margin-left: 0;
+  font-size: 21px;
+}
+
+.teaching h2::first-letter {
+  font-size: inherit;
+  font-weight: bold;
+  color: inherit;
+}
+
 h2::first-letter {
   color: var(--highlight-color);
-  font-family : Krinkes, cursive;
+  font-family : var(--fancyFont);
   font-size: 30px;
-  font-weight: normal
+  font-weight: normal;
 }
 
 h3 {
