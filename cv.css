@@ -50,6 +50,7 @@ a {
 .pdf-link {
   position: absolute;
   right: 24px;
+  z-index: 1;
   width: 48px;
   height: 48px;
   background-image: url(pdf.svg);
